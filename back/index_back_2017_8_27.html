@@ -1,0 +1,2708 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="CoinLaunch Dashboard">
+    <meta name="author" content="coinlaunch.co">
+    <link rel="shortcut icon" href="https://coinlaunch.co/wp-content/uploads/2017/06/Bit-logo2.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://coinlaunch.co/wp-content/uploads/2017/06/Bit-logo2.png" type="image/png"/>
+    <title>CoinLaunch Dashboard</title>
+
+    <!-- custom css-->
+    <link href="./css/coincreator_form.css" rel="stylesheet">
+    <!-- end custom css-->
+
+    <link href="./assets/global/css/style.css" rel="stylesheet">
+    <link href="./assets/global/css/theme.css" rel="stylesheet">
+    <link href="./assets/global/css/ui.css" rel="stylesheet">
+    <link href="./assets/admin/layout1/css/layout.css" rel="stylesheet">
+    <link href="./assets/global/plugins/step-form-wizard/css/step-form-wizard.min.css" rel="stylesheet">
+    <link href="./assets/global/plugins/select2/dist/css/select2.min.css" rel="stylesheet"/>
+    <link href="./assets/global/plugins/input-text/style.min.css" rel="stylesheet">
+
+
+
+    <!-- BEGIN PAGE STYLE -->
+    <link href="./assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <link href="./assets/global/plugins/select2/dist/css/select2.min.css" rel="stylesheet"/>
+    <link href="./assets/global/plugins/metrojs/metrojs.min.css" rel="stylesheet">
+    <link href="./assets/global/plugins/maps-amcharts/ammap/ammap.css" rel="stylesheet">
+
+
+    <!-- END PAGE STYLE -->
+
+    <script src="./assets/global/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body style="padding:25px;">
+<div class="page-content">
+    <div class="row">
+        <div class="col-lg-12">
+            <form id="jsonForm"></form>
+        </div>
+        <div class="footer">
+            <div class="copyright">
+                <p class="pull-left sm-pull-reset"> <span>Copyright <span class="copyright">©</span> 2017 </span> <span>CoinLaunch Co</span>. <span>All rights reserved. </span> </p>
+                <p class="pull-right sm-pull-reset"> <span><a href="support.html" class="m-r-10">Support</a> | <a href="terms.html" class="m-l-10 m-r-10">Terms of use</a> | <a href="policy.html" class="m-l-10">Privacy Policy</a></span> </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Preloader -->
+<div class="loader-overlay">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<!-- END PRELOADER -->
+
+<a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
+<script src="./assets/global/plugins/jquery/jquery-3.1.0.min.js"></script>
+<script src="./assets/global/plugins/jquery/jquery-migrate-3.0.0.min.js"></script>
+<script src="./assets/global/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="./assets/global/plugins/gsap/main-gsap.min.js"></script>
+<script src="./assets/global/plugins/tether/js/tether.min.js"></script>
+<script src="./assets/global/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="./assets/global/plugins/appear/jquery.appear.js"></script>
+<script src="./assets/global/plugins/jquery-cookies/jquery.cookies.min.js"></script> <!-- Jquery Cookies, for theme -->
+
+<script src="./assets/global/plugins/jquery-block-ui/jquery.blockUI.min.js"></script> <!-- simulate synchronous behavior when using AJAX -->
+
+<script src="./assets/global/plugins/bootbox/bootbox.min.js"></script> <!-- Modal with Validation -->
+
+<script src="./assets/global/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script> <!-- Custom Scrollbar sidebar -->
+
+<script src="./assets/global/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script> <!-- Show Dropdown on Mouseover -->
+
+<script src="./assets/global/plugins/charts-sparkline/sparkline.min.js"></script> <!-- Charts Sparkline -->
+
+<script src="./assets/global/plugins/retina/retina.min.js"></script> <!-- Retina Display -->
+
+<script src="./assets/global/plugins/select2/dist/js/select2.full.min.js"></script> <!-- Select Inputs -->
+
+<script src="./assets/global/plugins/icheck/icheck.min.js"></script> <!-- Checkbox & Radio Inputs -->
+
+<script src="./assets/global/plugins/backstretch/backstretch.min.js"></script> <!-- Background Image -->
+
+<script src="./assets/global/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script> <!-- Animated Progress Bar -->
+
+<script src="./assets/global/js/application.js"></script> <!-- Main Application Script -->
+
+<script src="./assets/global/js/plugins.js"></script> <!-- Main Plugin Initialization Script -->
+
+<script src="./assets/global/js/widgets/notes.js"></script> <!-- Notes Widget -->
+
+<script src="./assets/global/js/pages/search.js"></script> <!-- Search Script -->
+
+<!-- BEGIN PAGE SCRIPT -->
+
+<script src="./assets/global/plugins/metrojs/metrojs.min.js"></script> <!-- Flipping Panel -->
+
+
+<script src="./assets/global/plugins/bootstrap-editable/js/bootstrap-editable.min.js"></script> <!-- Inline Edition X-editable -->
+
+<script src="./assets/global/plugins/bootstrap-context-menu/bootstrap-contextmenu.min.js"></script> <!-- Context Menu -->
+
+<script src="./assets/global/plugins/multidatepicker/multidatespicker.min.js"></script> <!-- Multi dates Picker -->
+
+<script src="./assets/global/plugins/charts-chartjs/Chart.min.js"></script> <!-- ChartJS Chart -->
+
+<script src="./assets/global/plugins/charts-highstock/js/highstock.js"></script> <!-- financial Charts -->
+
+<script src="./assets/global/plugins/charts-highstock/js/modules/exporting.js"></script> <!-- Financial Charts Export Tool -->
+
+<script src="./assets/global/plugins/maps-amcharts/ammap/ammap.js"></script> <!-- Vector Map -->
+
+<script src="./assets/global/plugins/maps-amcharts/ammap/maps/js/worldLow.js"></script> <!-- Vector World Map  -->
+
+<script src="./assets/global/plugins/maps-amcharts/ammap/themes/black.js"></script> <!-- Vector Map Black Theme -->
+
+<script src="./assets/global/plugins/skycons/skycons.min.js"></script> <!-- Animated Weather Icons -->
+
+<script src="./assets/global/plugins/simple-weather/jquery.simpleWeather.js"></script> <!-- Weather Plugin -->
+
+<script src="./assets/global/js/widgets/todo_list.js"></script>
+<script src="./assets/global/js/widgets/widget_weather.js"></script>
+
+<script data-rocketsrc="./assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/rocketscript"></script> <!-- >Bootstrap Date Picker -->
+<script data-rocketsrc="./assets/global/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js" type="text/rocketscript"></script> <!-- >Bootstrap Date Picker in
+
+
+
+<!-- Dform plugin -->
+<script type="text/javascript" src="./assets/global/plugins/jquery.dform-master/jquery.dform-master/src/dform.js"></script>
+<script type="text/javascript" src="./assets/global/plugins/jquery.dform-master/jquery.dform-master/src/dform.core.js"></script>
+<script type="text/javascript" src="./assets/global/plugins/jquery.dform-master/jquery.dform-master/src/dform.converters.js"></script>
+<script type="text/javascript" src="./assets/global/plugins/jquery.dform-master/jquery.dform-master/src/dform.extensions.js"></script>
+<script type="text/javascript" src="./js/coincreator_form.js"></script>
+<script type="text/javascript" src="./js/show_tos.js"></script>
+<script>
+        $('#jsonForm').dform({
+            "type" : "div",
+            "class" : "panel",
+            "html" : [
+                {
+                    "type" : "div",
+                    "class" : "panel-header header-title",
+                    "html" : [
+                        {
+                            "type" : "img",
+                            "src" : "./assets/global/images/logo/Bit-logo-green-500.png",
+                        },
+                        {
+                            "type": "span",
+                            "class": "header-title",
+                            "html": [
+                                {
+                                    "type" : "strong",
+                                    "html" : "Coin"
+                                },
+                                {
+                                    "type" : "span",
+                                    "html" : "Creator"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type" : "div",
+                    "class" : "panel-content",
+                    "html" : [
+                        {
+                            "type" : "div",
+                            "class" : "icheck-inline header-check-inline",
+                            "html" : [
+                                {
+                                    "type" : "label",
+                                    "html" : [
+                                        {
+                                            "type" : "div",
+                                            "class" : "iradio_square-blue",
+                                            "html" : [
+                                                {
+                                                    "type" : "radio",
+                                                    "name" : "radio2",
+                                                    "data-radio" : "iradio_square-blue"
+                                                },
+                                                {
+                                                    "type" : "ins",
+                                                    "class" : "iCheck-helper"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "span",
+                                            "html" : "Crowd funding"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type" : "label",
+                                    "html" : [
+                                        {
+                                            "type" : "div",
+                                            "class" : "iradio_square-blue",
+                                            "html" : [
+                                                {
+                                                    "type" : "radio",
+                                                    "name" : "radio2",
+                                                    "data-radio" : "iradio_square-blue"
+                                                },
+                                                {
+                                                    "type" : "ins",
+                                                    "class" : "iCheck-helper"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "span",
+                                            "html" : "Bond / Debt"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type" : "label",
+                                    "html" : [
+                                        {
+                                            "type" : "div",
+                                            "class" : "iradio_square-blue",
+                                            "html" : [
+                                                {
+                                                    "type" : "radio",
+                                                    "name" : "radio2",
+                                                    "data-radio" : "iradio_square-blue"
+                                                },
+                                                {
+                                                    "type" : "ins",
+                                                    "class" : "iCheck-helper"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "span",
+                                            "html" : "Lending"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type" : "div",
+                            "class" : "nav-tabs3",
+                            "html" : [
+                                {
+                                    "type" : "ul",
+                                    "id" : "myTab6",
+                                    "class" : "nav nav-tabs",
+                                    "html" : [
+                                        {
+                                            "type" : "li",
+                                            "class" : "active",
+                                            "html" : [
+                                                {
+                                                    "type" : "a",
+                                                    "href" : "#tab6_1",
+                                                    "data-toggle" : "tab",
+                                                    "aria-expanded" : "true",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "icon-home"
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "Setup"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "li",
+                                            "html" : [
+                                                {
+                                                    "type" : "a",
+                                                    "href" : "#tab6_8",
+                                                    "data-toggle" : "tab",
+                                                    "aria-expanded" : "false",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "icon-graph"
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "ICO Contract"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "li",
+                                            "html" : [
+                                                {
+                                                    "type" : "a",
+                                                    "href" : "#tab6_2",
+                                                    "data-toggle" : "tab",
+                                                    "aria-expanded" : "false",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-gears",
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "Permissions"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "li",
+                                            "html" : [
+                                                {
+                                                    "type" : "a",
+                                                    "href" : "#tab6_3",
+                                                    "data-toggle" : "tab",
+                                                    "aria-expanded" : "false",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-users",
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "Crowd Funding"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "li",
+                                            "html" : [
+                                                {
+                                                    "type" : "a",
+                                                    "href" : "#tab6_4",
+                                                    "data-toggle" : "tab",
+                                                    "aria-expanded" : "false",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-bank",
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "Bond / Debt"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "li",
+                                            "html" : [
+                                                {
+                                                    "type" : "a",
+                                                    "href" : "#tab6_5",
+                                                    "data-toggle" : "tab",
+                                                    "aria-expanded" : "false",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-line-chart",
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "Lending"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "li",
+                                            "html" : [
+                                                {
+                                                    "type" : "a",
+                                                    "href" : "#tab6_6",
+                                                    "data-toggle" : "tab",
+                                                    "aria-expanded" : "false",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-code",
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "Contract"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "li",
+                                            "html" : [
+                                                {
+                                                    "type" : "a",
+                                                    "href" : "#tab6_7",
+                                                    "data-toggle" : "tab",
+                                                    "aria-expanded" : "false",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "icon icons-documents-bookmarks-01",
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "Summary"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type" : "div",
+                                    "class" : "tab-content",
+                                    "html" : [
+                                        {
+                                            "type" : "div",
+                                            "class" : "tab-pane fade active in",
+                                            "id" : "tab6_1",
+                                            "html" : [
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "name" : "address",
+                                                            "id": "beneficiaryAddress",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Beneficiary Account"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Put your Ethereum address here",
+                                                            "data-original-title" : "Beneficiary Account"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "class" : "form-control input-lg",
+                                                            "name": "tokenName",
+                                                            "id": "tokenName",
+                                                            "placeholder" : "Coin or Token Name"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "This is full name of your token",
+                                                            "data-original-title" : "Coin or Token Name"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "textarea",
+                                                            "name" : "description",
+                                                            "description": "description",
+                                                            "class" : "form-control form-white",
+                                                            "placeholder" : "Write your description... (minimum 30 characters)",
+                                                            "rows" : "10",
+                                                            "min-length" : "30",
+                                                            "required" : "true"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "class" : "form-control input-lg",
+                                                            "name": "symbol",
+                                                            "id": "symbol",
+                                                            "placeholder" : "Choose A Symbol"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "This is like your stock ticker symbol, choose something memerable",
+                                                            "data-original-title" : "Your Token or Coin Symbol"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "tokenVersion",
+                                                            "id" : "tokenVersion",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Version Number of Token"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Which version of token?",
+                                                            "data-original-title" : "Token Version Number"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "div",
+                                                    "class": "col-md-12",
+                                                    "html": [
+                                                        {
+                                                            "type" : "h3",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "class" : "switch m-r-20",
+                                                                    "css" : {
+                                                                        "margin-top" : "-5px"
+                                                                    },
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "checkbox",
+                                                                            "id": "isDecimalPoint",
+                                                                            "class" : "switch-input"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-label",
+                                                                            "data-on" : "On",
+                                                                            "data-off" : "Off"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-handle"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "html" : "Decimal point"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "initialSupply",
+                                                            "id" : "initialSupply",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Number of Initial Supply"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How much funds will raise for a new venture?",
+                                                            "data-original-title" : "Initial supply"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "numberOfDecimalPoints",
+                                                            "id" : "numberOfDecimalPoints",
+                                                            "class" : "form-control input-lg",
+                                                            "placeholder" : "Number of Decimal Points"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How small fraction would you like to offer?",
+                                                            "data-original-title" : "Number of Decimal Points"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "div",
+                                            "class" : "tab-pane fade",
+                                            "id" : "tab6_8",
+                                            "html" : [
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "name" : "multiSigEth",
+                                                            "id": "multiSigEth",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Multi Signature Ether"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Put your Ethereum address here",
+                                                            "data-original-title" : "Multi Signature Ether"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "class" : "form-control input-lg",
+                                                            "name": "tokensForTeam",
+                                                            "id": "tokensForTeam",
+                                                            "placeholder" : "Tokens For Team"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "This is full name of your token",
+                                                            "data-original-title" : "Tokens for Team"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "name": "minContributionEth",
+                                                            "id": "minContributionEth",
+                                                            "placeholder" : "Minimum Contribution Ether"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "This is like your stock ticker symbol, choose something memerable",
+                                                            "data-original-title" : "Minimum Contribution Ether"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "maxCap",
+                                                            "id" : "maxCap",
+                                                            "class" : "form-control input-lg",
+                                                            "placeholder" : "Maximum Capital"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Which version of token?",
+                                                            "data-original-title" : "Maximum Capital"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "minCap",
+                                                            "id" : "minCap",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Minimum Capital"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How much funds will raise for a new venture?",
+                                                            "data-original-title" : "Minimum Capital"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "tokenPriceWei",
+                                                            "id" : "tokenPriceWei",
+                                                            "class" : "form-control input-lg",
+                                                            "placeholder" : "Token Price by Wei"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How small fraction would you like to offer?",
+                                                            "data-original-title" : "Token Price by Wei"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "campaignDurationDays",
+                                                            "id" : "campaignDurationDays",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Campaign Duration Days"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How much funds will raise for a new venture?",
+                                                            "data-original-title" : "Campaign Duration Days"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "firstPeriod",
+                                                            "id" : "firstPeriod",
+                                                            "class" : "form-control input-lg",
+                                                            "placeholder" : "First Period"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How small fraction would you like to offer?",
+                                                            "data-original-title" : "First Period"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "secondPeriod",
+                                                            "id" : "secondPeriod",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Second Period"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How much funds will raise for a new venture?",
+                                                            "data-original-title" : "Second Period"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "thirdPeriod",
+                                                            "id" : "thirdPeriod",
+                                                            "class" : "form-control input-lg",
+                                                            "placeholder" : "Third Period"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How small fraction would you like to offer?",
+                                                            "data-original-title" : "Third Period"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "firstBonus",
+                                                            "id" : "firstBonus",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "First Bonus"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How small fraction would you like to offer?",
+                                                            "data-original-title" : "First Bonus"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "secondBonus",
+                                                            "id" : "secondBonus",
+                                                            "class" : "form-control input-lg",
+                                                            "placeholder" : "Second Bonus"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How much funds will raise for a new venture?",
+                                                            "data-original-title" : "Second Bonus"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "thirdBonus",
+                                                            "id" : "thirdBonus",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Third Bonus"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How small fraction would you like to offer?",
+                                                            "data-original-title" : "Third Bonus"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "div",
+                                            "class" : "tab-pane fade",
+                                            "id" : "tab6_2",
+                                            "html" : [
+                                                {
+                                                    "type" : "h3",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "label",
+                                                            "class" : "switch m-r-20",
+                                                            "css" : {
+                                                                "margin-top" : "-5px"
+                                                            },
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "checkbox",
+                                                                    "id": "isEnableMarketFee",
+                                                                    "class" : "switch-input"
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "class" : "switch-label",
+                                                                    "data-on" : "On",
+                                                                    "data-off" : "Off"
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "class" : "switch-handle"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "Enable Market Fee"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-6 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "name" : "percentageFee",
+                                                            "id" : "percentageFee",
+                                                            "class" : "form-control input-sm form-white",
+                                                            "placeholder" : "Percentage fee for each transaction"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "The percentage of market fees that are applied can be defined and changed by the issuer and any feee generated that way will be accumulated when any tokens are traded",
+                                                            "data-original-title" : "Market Fee"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "br"
+                                                },
+                                                {
+                                                    "type" : "br"
+                                                },
+                                                {
+                                                    "type" : "h3",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "label",
+                                                            "class" : "switch m-r-20",
+                                                            "css" : {
+                                                                "margin-top" : "-5px"
+                                                            },
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "checkbox",
+                                                                    "id": "isRequireHoldersWhiteListed",
+                                                                    "class" : "switch-input"
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "class" : "switch-label",
+                                                                    "data-on" : "On",
+                                                                    "data-off" : "Off"
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "class" : "switch-handle"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "Require holders to be whitelisted"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "h3",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "label",
+                                                            "class" : "switch m-r-20",
+                                                            "css" : {
+                                                                "margin-top" : "-5px"
+                                                            },
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "checkbox",
+                                                                    "id": "isIssuerMayTransferBack",
+                                                                    "class" : "switch-input"
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "class" : "switch-label",
+                                                                    "data-on" : "On",
+                                                                    "data-off" : "Off"
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "class" : "switch-handle"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "Issuer May transfer asset back to itself."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "h3",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "label",
+                                                            "class" : "switch m-r-20",
+                                                            "css" : {
+                                                                "margin-top" : "-5px"
+                                                            },
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "checkbox",
+                                                                    "id": "isIssuerMustApproveAllTransfer",
+                                                                    "class" : "switch-input"
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "class" : "switch-label",
+                                                                    "data-on" : "On",
+                                                                    "data-off" : "Off"
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "class" : "switch-handle"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "Issuer Must approve all transfers."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "div",
+                                            "class" : "tab-pane fade in",
+                                            "id" : "tab6_3",
+                                            "html" : [
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "name" : "fundingGoalInEther",
+                                                            "id" : "fundingGoalInEther",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Funding Goal in Ether"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How much are you looking to raise?",
+                                                            "data-original-title" : "Funding Goal in Ether."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "name" : "datetimepicker",
+                                                            "id": "campaignStartDate",
+                                                            "class" : "form-control datetimepicker hasDatepicker input-lg",
+                                                            "placeholder" : "Choose a Start Date. (mm/dd/yy)",
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "When should the campaign begin?",
+                                                            "data-original-title" : "Start Date"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "name" : "datetimepicker",
+                                                            "id": "campaignEndDate",
+                                                            "class" : "form-control datetimepicker hasDatepicker input-lg form-white",
+                                                            "placeholder" : "Choose a End Date. (mm/dd/yy)",
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "When should the campaign end?",
+                                                            "data-original-title" : "End Date"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "name" : "costOfEachToken",
+                                                            "id": "costOfEachToken",
+                                                            "class" : "form-control input-lg",
+                                                            "placeholder" : "Cost of Each Token"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "How much should each token cost?",
+                                                            "data-original-title" : "Token Cost."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-md-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "text",
+                                                            "name" : "tokenRewardAddress",
+                                                            "id" : "tokenRewardAddress",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Token Reward Address"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Where to send the proceeds? ie.Your Ether Wallet.",
+                                                            "data-original-title" : "Token Reward."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "h3",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "class" : "switch m-r-20",
+                                                                    "css" : {
+                                                                        "margin-top" : "-5px"
+                                                                    },
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "checkbox",
+                                                                            "id": "isReturnFunds",
+                                                                            "class" : "switch-input"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-label",
+                                                                            "data-on" : "On",
+                                                                            "data-off" : "Off"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-handle"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "html" : "Return funds if funding not met."
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type" : "h3",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "class" : "switch m-r-20",
+                                                                    "css" : {
+                                                                        "margin-top" : "-5px"
+                                                                    },
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "checkbox",
+                                                                            "id": "isAllowForOverSubscription",
+                                                                            "class" : "switch-input"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-label",
+                                                                            "data-on" : "On",
+                                                                            "data-off" : "Off"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-handle"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "html" : "Allow for over subscription."
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type" : "h3",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "class" : "switch m-r-20",
+                                                                    "css" : {
+                                                                        "margin-top" : "-5px"
+                                                                    },
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "checkbox",
+                                                                            "id": "isDuplicateFounderTokens",
+                                                                            "class" : "switch-input"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-label",
+                                                                            "data-on" : "On",
+                                                                            "data-off" : "Off"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-handle"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "html" : "Duplicate Founder Tokens."
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type" : "h3",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "class" : "switch m-r-20",
+                                                                    "css" : {
+                                                                        "margin-top" : "-5px"
+                                                                    },
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "checkbox",
+                                                                            "id": "isVetoPower",
+                                                                            "class" : "switch-input"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-label",
+                                                                            "data-on" : "On",
+                                                                            "data-off" : "Off"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-handle"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "html" : "Veto Power."
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type" : "h3",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "class" : "switch m-r-20",
+                                                                    "css" : {
+                                                                        "margin-top" : "-5px"
+                                                                    },
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "checkbox",
+                                                                            "id": "isEnableTokenAccountFreezing",
+                                                                            "class" : "switch-input"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-label",
+                                                                            "data-on" : "On",
+                                                                            "data-off" : "Off"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-handle"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "html" : "Enable Token Account Freezing."
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type" : "h3",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "class" : "switch m-r-20",
+                                                                    "css" : {
+                                                                        "margin-top" : "-5px"
+                                                                    },
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "checkbox",
+                                                                            "id": "isDiscounts",
+                                                                            "class" : "switch-input"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-label",
+                                                                            "data-on" : "On",
+                                                                            "data-off" : "Off"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-handle"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "html" : "Discounts."
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type" : "number",
+                                                            "class" : "form-control input-sm form-white",
+                                                            "placeholder" : "Starting Range"
+                                                        },
+                                                        {
+                                                            "type" : "number",
+                                                            "class" : "form-control input-sm form-white",
+                                                            "placeholder" : "Ending Range"
+                                                        },
+                                                        {
+                                                            "type" : "number",
+                                                            "class" : "form-control input-sm form-white",
+                                                            "placeholder" : "Discount percentage"
+                                                        },
+                                                        {
+                                                            "type" : "number",
+                                                            "class" : "form-control input-sm",
+                                                            "placeholder" : "Starting Range"
+                                                        },
+                                                        {
+                                                            "type" : "number",
+                                                            "class" : "form-control input-sm",
+                                                            "placeholder" : "Ending Range"
+                                                        },
+                                                        {
+                                                            "type" : "number",
+                                                            "class" : "form-control input-sm",
+                                                            "placeholder" : "Discount percentage"
+                                                        },
+                                                        {
+                                                            "type" : "number",
+                                                            "class" : "form-control input-sm form-white",
+                                                            "placeholder" : "Starting Range"
+                                                        },
+                                                        {
+                                                            "type" : "number",
+                                                            "class" : "form-control input-sm form-white",
+                                                            "placeholder" : "Ending Range"
+                                                        },
+                                                        {
+                                                            "type" : "number",
+                                                            "class" : "form-control input-sm form-white",
+                                                            "placeholder" : "Discount percentage"
+                                                        },
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "div",
+                                            "class" : "tab-pane fade in",
+                                            "id" : "tab6_4",
+                                            "html" : [
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Coupon dates are the dates on which the bond issuer will make interest payments. Typical intervals are annual or semi-annual coupon payments",
+                                                            "data-original-title" : "Support Title"
+                                                        },
+                                                        {
+                                                            "type" : "strong",
+                                                            "html" : "COUPON DATES"
+                                                        },
+                                                        {
+                                                            "type" : "br"
+                                                        },
+                                                        {
+                                                            "type" : "br"
+                                                        },
+                                                        {
+                                                            "type" : "div",
+                                                            "class" : "icheck-inline",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "div",
+                                                                            "class" : "iradio_square-blue",
+                                                                            "id": "couponDatesWeekly",
+                                                                            "name": "couponDatesWeekly",
+                                                                            "html" : [
+                                                                                {
+                                                                                    "type" : "radio",
+                                                                                    "name" : "couponDate",
+                                                                                    "data-radio" : "iradio_square-blue",
+                                                                                },
+                                                                                {
+                                                                                    "type" : "ins",
+                                                                                    "class" : "iCheck-helper",
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type" : "strong",
+                                                                            "html" : "Weekly"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "label",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "div",
+                                                                            "class" : "iradio_square-blue",
+                                                                            "id": "couponDatesBiWeekly",
+                                                                            "name": "couponDatesBiWeekly",
+                                                                            "html" : [
+                                                                                {
+                                                                                    "type" : "radio",
+                                                                                    "name" : "couponDate",
+                                                                                    "data-radio" : "iradio_square-blue",
+                                                                                },
+                                                                                {
+                                                                                    "type" : "ins",
+                                                                                    "class" : "iCheck-helper",
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type" : "strong",
+                                                                            "html" : "Bi-Weekly"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "label",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "div",
+                                                                            "id": "couponDatesMonthly",
+                                                                            "name": "couponDatesMonthly",
+                                                                            "class" : "iradio_square-blue",
+                                                                            "html" : [
+                                                                                {
+                                                                                    "type" : "radio",
+                                                                                    "name" : "couponDate",
+                                                                                    "data-radio" : "iradio_square-blue",
+                                                                                },
+                                                                                {
+                                                                                    "type" : "ins",
+                                                                                    "class" : "iCheck-helper"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type" : "strong",
+                                                                            "html" : "Monthly"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "label",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "div",
+                                                                            "class" : "iradio_square-blue",
+                                                                            "id": "couponDatesQuarterly",
+                                                                            "name": "couponDatesQuarterly",
+                                                                            "html" : [
+                                                                                {
+                                                                                    "type" : "radio",
+                                                                                    "name" : "couponDate",
+                                                                                    "data-radio" : "iradio_square-blue"
+                                                                                },
+                                                                                {
+                                                                                    "type" : "ins",
+                                                                                    "class" : "iCheck-helper"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type" : "strong",
+                                                                            "html" : "Quarterly"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "label",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "div",
+                                                                            "class" : "iradio_square-blue",
+                                                                            "id": "couponDatesSemiAnnually",
+                                                                            "name": "couponDatesSemiAnnually",
+                                                                            "html" : [
+                                                                                {
+                                                                                    "type" : "radio",
+                                                                                    "name" : "couponDate",
+                                                                                    "data-radio" : "iradio_square-blue"
+                                                                                },
+                                                                                {
+                                                                                    "type" : "ins",
+                                                                                    "class" : "iCheck-helper"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type" : "strong",
+                                                                            "html" : "Semi Annually"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "label",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "div",
+                                                                            "class" : "iradio_square-blue",
+                                                                            "id": "couponDatesYearly",
+                                                                            "name": "couponDatesYearly",
+                                                                            "html" : [
+                                                                                {
+                                                                                    "type" : "radio",
+                                                                                    "name" : "couponDate",
+                                                                                    "data-radio" : "iradio_square-blue"
+                                                                                },
+                                                                                {
+                                                                                    "type" : "ins",
+                                                                                    "class" : "iCheck-helper"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type" : "strong",
+                                                                            "html" : "Yearly"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "issuePriceInEther",
+                                                            "id" : "issuePriceInEther",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Issue price in ether"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Issue price is the price at which the bond issuer originally sells the bonds.",
+                                                            "data-original-title" : "Issue Price"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "maturityDate",
+                                                            "id" : "maturityDate",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Maturity date"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Maturity date is the date on which the bond will mature and the bond issuer will pay the bond holder the face value of the bond.",
+                                                            "data-original-title" : "Maturity date"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "couponRate",
+                                                            "id" : "couponRate",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Coupon Rate"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Coupon rate is the rate of interest the bond issuer will pay on the face value of the bond, expressed as a percentage.",
+                                                            "data-original-title" : "Coupon Rate"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "faceValue",
+                                                            "id" : "faceValue",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Face value"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Face value is the money amount the bond will be worth at its maturity, and is also the reference amount the bond issuer uses when calculating interest payments.",
+                                                            "data-original-title" : "Face Value"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "daysUntilDefault",
+                                                            "id" : "daysUntilDefault",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Days Until Default"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "The amount of days of non-payment before collaterial is given to debt holders. Only applies to Collaterlalized / secured debt",
+                                                            "data-original-title" : "Default"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "collateral",
+                                                            "id" : "collateral",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Collateral"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Collateral is an asset used to secure a loan; it is something that the lender can take if the borrower defaults. Enter the amount of ether you will use to secure the debt.",
+                                                            "data-original-title" : "Collateral"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "h3",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "class" : "switch m-r-20",
+                                                                    "css" : {
+                                                                        "margin-top" : "-1px"
+                                                                    },
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "checkbox",
+                                                                            "id": "isUnsecured",
+                                                                            "class" : "switch-input"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-label",
+                                                                            "data-on" : "On",
+                                                                            "data-off" : "Off"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-handle"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "i",
+                                                                    "class" : "fa fa-question-circle c-blue",
+                                                                    "rel" : "popover",
+                                                                    "data-container" : "body",
+                                                                    "data-toggle" : "popover",
+                                                                    "data-placement" : "top",
+                                                                    "data-content" : "Unsecured debt refers to any type of debt or general obligation that is not protected by a guarantor, or collateralized by a lien on specific assets of the borrower in the case of a bankruptcy or liquidation or failure to meet the terms for repayment.",
+                                                                    "data-original-title" : "Unsecured"
+                                                                },
+                                                                {
+                                                                    "type" : "strong",
+                                                                    "html" : "Unsecured"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "div",
+                                            "class" : "tab-pane fade in",
+                                            "id" : "tab6_5",
+                                            "html" : [
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "strong",
+                                                            "html" : "INTEREST PAYMENT SCHEDULE"
+                                                        },
+                                                        {
+                                                            "type" : "br"
+                                                        },
+                                                        {
+                                                            "type" : "br"
+                                                        },
+                                                        {
+                                                            "type" : "div",
+                                                            "class" : "icheck-inline",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "div",
+                                                                            "class" : "iradio_square-blue",
+                                                                            "html" : [
+                                                                                {
+                                                                                    "type" : "radio",
+                                                                                    "name" : "interestPayment",
+                                                                                    "data-radio" : "iradio_square-blue"
+                                                                                },
+                                                                                {
+                                                                                    "type" : "ins",
+                                                                                    "class" : "iCheck-helper"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type" : "strong",
+                                                                            "html" : "Weekly"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "label",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "div",
+                                                                            "class" : "iradio_square-blue",
+                                                                            "html" : [
+                                                                                {
+                                                                                    "type" : "radio",
+                                                                                    "name" : "interestPayment",
+                                                                                    "data-radio" : "iradio_square-blue"
+                                                                                },
+                                                                                {
+                                                                                    "type" : "ins",
+                                                                                    "class" : "iCheck-helper"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type" : "strong",
+                                                                            "html" : "Bi-Weekly"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "label",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "div",
+                                                                            "class" : "iradio_square-blue",
+                                                                            "html" : [
+                                                                                {
+                                                                                    "type" : "radio",
+                                                                                    "name" : "interestPayment",
+                                                                                    "data-radio" : "iradio_square-blue"
+                                                                                },
+                                                                                {
+                                                                                    "type" : "ins",
+                                                                                    "class" : "iCheck-helper"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type" : "strong",
+                                                                            "html" : "Monthly"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "label",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "div",
+                                                                            "class" : "iradio_square-blue",
+                                                                            "html" : [
+                                                                                {
+                                                                                    "type" : "radio",
+                                                                                    "name" : "interestPayment",
+                                                                                    "data-radio" : "iradio_square-blue"
+                                                                                },
+                                                                                {
+                                                                                    "type" : "ins",
+                                                                                    "class" : "iCheck-helper"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type" : "strong",
+                                                                            "html" : "Quarterly"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "label",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "div",
+                                                                            "class" : "iradio_square-blue",
+                                                                            "html" : [
+                                                                                {
+                                                                                    "type" : "radio",
+                                                                                    "name" : "interestPayment",
+                                                                                    "data-radio" : "iradio_square-blue"
+                                                                                },
+                                                                                {
+                                                                                    "type" : "ins",
+                                                                                    "class" : "iCheck-helper"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type" : "strong",
+                                                                            "html" : "Yearly"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "depositDownPayment",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Deposit / Down payment"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "A down payment is a type of payment made in cash during the onset of the purchase of an expensive good or service. ... For example, many homebuyers pay down payments equal to 5 to 25% of the total value of the home.",
+                                                            "data-original-title" : "Deposit"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "termInMonth",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Term in months"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "Length of the repayment",
+                                                            "data-original-title" : "Term in months"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "annualPercentage",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Annual percentage rate of charge (APR)"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "The percentage paid based on the value of the issue price",
+                                                            "data-original-title" : "Annual percentage rate"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12 inside-tooltip",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "number",
+                                                            "name" : "daysUntilDefault",
+                                                            "class" : "form-control input-lg form-white",
+                                                            "placeholder" : "Days Until Default"
+                                                        },
+                                                        {
+                                                            "type" : "i",
+                                                            "class" : "fa fa-question-circle c-blue",
+                                                            "rel" : "popover",
+                                                            "data-container" : "body",
+                                                            "data-toggle" : "popover",
+                                                            "data-placement" : "top",
+                                                            "data-content" : "The amount of days of non-payment before down payment / deposit is given to debt holders. Only applies to Collaterlalized / secured debt.",
+                                                            "data-original-title" : "Default"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "col-sm-12",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "h3",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "class" : "switch m-r-20",
+                                                                    "css" : {
+                                                                        "margin-top" : "-1px"
+                                                                    },
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "checkbox",
+                                                                            "id": "isBalloonPayment",
+                                                                            "name": "isBalloonPayment",
+                                                                            "class" : "switch-input"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-label",
+                                                                            "data-on" : "On",
+                                                                            "data-off" : "Off"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-handle"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "i",
+                                                                    "class" : "fa fa-question-circle c-blue",
+                                                                    "rel" : "popover",
+                                                                    "data-container" : "body",
+                                                                    "data-toggle" : "popover",
+                                                                    "data-placement" : "top",
+                                                                    "data-content" : "A repayment of the outstanding principal sum made at the end of a loan period, interest only having been paid.",
+                                                                    "data-original-title" : "Annual percentage rate"
+                                                                },
+                                                                {
+                                                                    "type" : "strong",
+                                                                    "html" : "Balloon Payment (Interest Only)"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type" : "h3",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "label",
+                                                                    "class" : "switch m-r-20",
+                                                                    "css" : {
+                                                                        "margin-top" : "-1px"
+                                                                    },
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "checkbox",
+                                                                            "id": "isPrincipalInterest",
+                                                                            "name": "isPrincipalInterest",
+                                                                            "class" : "switch-input"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-label",
+                                                                            "data-on" : "On",
+                                                                            "data-off" : "Off"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-handle"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type" : "i",
+                                                                    "class" : "fa fa-question-circle c-blue",
+                                                                    "rel" : "popover",
+                                                                    "data-container" : "body",
+                                                                    "data-toggle" : "popover",
+                                                                    "data-placement" : "top",
+                                                                    "data-content" : "Principal is the money used to pay down the balance of the loan; interest is the charge paid to the lender for the privilege of borrowing the money.",
+                                                                    "data-original-title" : "Principal and Interest"
+                                                                },
+                                                                {
+                                                                    "type" : "strong",
+                                                                    "html" : "Principal and Interest"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "div",
+                                            "class" : "tab-pane fade in",
+                                            "id" : "tab6_6",
+                                            "html" : [
+                                                {
+                                                    "type" : "div",
+                                                    "id": "contractCode",
+                                                    "name": "contractCode",
+                                                    "class" : "col-sm-12",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "textarea",
+                                                            "name" : "comment",
+                                                            "rows" : "20",
+                                                            "class" : "form-control form-white",
+                                                            "placeholder" : "Solidity Contract Code",
+                                                            "minlength" : "30",
+                                                            "aria-required" : "true",
+                                                            "html" : "pragma solidity ^0.4.0;\n" +
+                                                            "\n" +
+                                                            "contract Token {\n" +
+                                                            "    mapping (address => uint) public balances;\n" +
+                                                            "\n" +
+                                                            "    function Token() {\n" +
+                                                            "        balances[msg.sender] = 1000000;\n" +
+                                                            "    }\n" +
+                                                            "\n" +
+                                                            "    function transfer(address _to, uint _amount) {\n" +
+                                                            "        require (balances[msg.sender] < _amount) {\n" +
+                                                            "                    }\n" +
+                                                            "\n" +
+                                                            "        balances[msg.sender] -= _amount;\n" +
+                                                            "        balances[_to] += _amount;\n" +
+                                                            "    }\n" +
+                                                            "}"
+                                                        },
+                                                        {
+                                                            "type" : "br"
+                                                        },
+                                                        {
+                                                            "type" : "br"
+                                                        },
+                                                        {
+                                                            "type" : "strong",
+                                                            "html" : "TOKEN CONTRACT ADDRESS"
+                                                        },
+                                                        {
+                                                            "type" : "text",
+                                                            "class" : "form-control input-m",
+                                                            "placeholder" : "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359"
+                                                        },
+                                                        {
+                                                            "type" : "h3",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "i",
+                                                                    "class" : "fa fa-warning c-blue",
+                                                                    "rel" : "popover",
+                                                                    "data-container" : "body",
+                                                                    "data-toggle" : "popover",
+                                                                    "data-placement" : "top",
+                                                                    "data-content" : "Deploy your contract. BE CAREFUL, there is no undo.",
+                                                                    "data-original-title" : "GoLive"
+                                                                },
+                                                                {
+                                                                    "type" : "strong",
+                                                                    "html" : "Go Live"
+                                                                },
+                                                                {
+                                                                    "type" : "label",
+                                                                    "class" : "switch m-r-20",
+                                                                    "css" : {
+                                                                        "margin-top" : "-1px"
+                                                                    },
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "checkbox",
+                                                                            "id": "isGoLive",
+                                                                            "name": "isGoLive",
+                                                                            "class" : "switch-input"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-label",
+                                                                            "data-on" : "On",
+                                                                            "data-off" : "Off"
+                                                                        },
+                                                                        {
+                                                                            "type" : "span",
+                                                                            "class" : "switch-handle"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type" : "div",
+                                            "class" : "tab-pane fade in",
+                                            "id" : "tab6_7",
+                                            "html" : [
+                                                {
+                                                    "type" : "h2",
+                                                    "css" : {
+                                                        "text-align" : "center"
+                                                    },
+                                                    "html" : {
+                                                        "type" : "strong",
+                                                        "html" : "CONTACT SUMMARY"
+                                                    }
+                                                },
+                                                {
+                                                    "type" : "h3",
+                                                    "html" : "SETUP"
+                                                },
+                                                {
+                                                    "type" : "h3",
+                                                    "html" : "PERMISSIONS"
+                                                },
+                                                {
+                                                    "type" : "h3",
+                                                    "html" : "CROWD FUNDING"
+                                                },
+                                                {
+                                                    "type" : "h3",
+                                                    "html" : "BOND / DEBT"
+                                                },
+                                                {
+                                                    "type" : "h3",
+                                                    "html" : "LENDING"
+                                                },
+                                                {
+                                                    "type" : "h3",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "span",
+                                                            "html" : "TOKEN CONTRACT ADDRESS"
+                                                        },
+                                                        {
+                                                            "type" : "strong",
+                                                            "html" : "0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type" : "div",
+                    "css" : {
+                        "text-align" : "right",
+                        "margin-top" : "10px",
+                        "margin-right" : "25px"
+                    },
+                    "html" : [
+                        {
+                            "type" : "button",
+                            "class" : "btn btn-white",
+                            "data-toggle" : "modal",
+                            "data-target" : "#colored-embed",
+                            "html" : "Embed"
+                        },
+                        {
+                            "type" : "div",
+                            "class" : "modal fade",
+                            "id" : "colored-embed",
+                            "tabindex" : "-1",
+                            "role" : "dialog",
+                            "aria-hidden" : "true",
+                            "css" : {
+                                "display" : "none"
+                            },
+                            "html" : [
+                                {
+                                    "type" : "div",
+                                    "class" : "modal-dialog",
+                                    "html" : [
+                                        {
+                                            "type" : "div",
+                                            "class" : "modal-content",
+                                            "html" : [
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "modal-header bg-green",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "button",
+                                                            "class" : "close",
+                                                            "data-dismiss" : "modal",
+                                                            "aria-hidden" : "true",
+                                                            "html" : {
+                                                                "type" : "i",
+                                                                "class" : "icons-office-52"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type" : "h4",
+                                                            "class" : "modal-title",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "strong",
+                                                                    "html" : "Embed"
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "html" : "Code"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "modal-body",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "textarea",
+                                                            "class" : "form-control form-white",
+                                                            "rows" : "20",
+                                                            "placeholder" : "Solidity Contract Code",
+                                                            "minlength" : "30",
+                                                            "aria-required" : "true"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "modal-footer",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "button",
+                                                            "class" : "btn btn-default btn-embossed",
+                                                            "data-dismiss" : "modal",
+                                                            "html" : "Close"
+                                                        },
+                                                        {
+                                                            "type" : "button",
+                                                            "class" : "btn btn-primary btn-embossed",
+                                                            "data-dismiss" : "modal",
+                                                            "html" : "Save Changes"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type" : "button",
+                            "class" : "btn btn-danger",
+                            "data-toggle" : "modal",
+                            "data-target" : "#modal-slideright",
+                            "html" : "Reset"
+                        },
+                        {
+                            "type" : "div",
+                            "class" : "modal fade modal-slideright",
+                            "id" : "modal-slideright",
+                            "tabindex" : "-1",
+                            "role" : "dialog",
+                            "aria-hidden" : "true",
+                            "css" : {
+                                "display" : "none"
+                            },
+                            "html" : [
+                                {
+                                    "type" : "div",
+                                    "class" : "modal-dialog",
+                                    "html" : [
+                                        {
+                                            "type" : "div",
+                                            "class" : "modal-content",
+                                            "html" : [
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "modal-body",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "div",
+                                                            "class" : "row",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "div",
+                                                                    "class" : "col-sm-12",
+                                                                    "html" : [
+                                                                        {
+                                                                            "type" : "h2",
+                                                                            "class" : "c-primary m-b-30",
+                                                                            "html" : "Are you sure?"
+                                                                        },
+                                                                        {
+                                                                            "type" : "button",
+                                                                            "class" : "btn btn-primary btn-embossed btn-block",
+                                                                            "data-dismiss" : "modal",
+                                                                            "html" : "Yes"
+                                                                        },
+                                                                        {
+                                                                            "type" : "button",
+                                                                            "class" : "btn btn-white btn-block",
+                                                                            "data-dismiss" : "modal",
+                                                                            "html" : "Oops!"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type" : "button",
+                            "class" : "btn btn-primary",
+                            "data-toggle" : "modal",
+                            "data-target" : "#colored-header",
+                            "html" : "Save"
+                        },
+                        {
+                            "type" : "div",
+                            "class" : "modal fade",
+                            "id" : "colored-header",
+                            "tabindex" : "-1",
+                            "role" : "dialog",
+                            "aria-hidden" : "true",
+                            "css" : {
+                                "display" : "none"
+                            },
+                            "html" : [
+                                {
+                                    "type" : "div",
+                                    "class" : "modal-dialog",
+                                    "html" : [
+                                        {
+                                            "type" : "div",
+                                            "class" : "modal-content",
+                                            "html" : [
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "modal-header bg-green",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "button",
+                                                            "class" : "close",
+                                                            "data-dismiss" : "modal",
+                                                            "aria-hidden" : "true",
+                                                            "html" : {
+                                                                "type" : "i",
+                                                                "class" : "icons-office-52"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type" : "h4",
+                                                            "class" : "modal-title",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "strong",
+                                                                    "html" : "Terms "
+                                                                },
+                                                                {
+                                                                    "type" : "span",
+                                                                    "html" : "of Service"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "modal-body",
+                                                    "html" : [
+                                                        {
+                                                            "type": "canvas",
+                                                            "id": "tos-canvas"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "modal-footer",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "button",
+                                                            "class" : "btn btn-default btn-embossed",
+                                                            "data-dismiss" : "modal",
+                                                            "html" : "Close"
+                                                        },
+                                                        {
+                                                            "type" : "button",
+                                                            "class" : "btn btn-primary btn-embossed",
+                                                            "data-dismiss" : "modal",
+                                                            "html" : "Save Changes"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type" : "div",
+                            "class" : "modal fade",
+                            "id" : "complete-modal",
+                            "tabindex" : "-1",
+                            "role" : "dialog",
+                            "aria-hidden" : "true",
+                            "css" : {
+                                "display" : "none"
+                            },
+                            "html" : [
+                                {
+                                    "type" : "div",
+                                    "class" : "modal-dialog",
+                                    "html" : [
+                                        {
+                                            "type" : "div",
+                                            "class" : "modal-content",
+                                            "html" : [
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "modal-header bg-green",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "button",
+                                                            "class" : "close",
+                                                            "data-dismiss" : "modal",
+                                                            "aria-hidden" : "true",
+                                                            "html" : {
+                                                                "type" : "i",
+                                                                "class" : "icons-office-52"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type" : "h4",
+                                                            "class" : "modal-title",
+                                                            "html" : [
+                                                                {
+                                                                    "type" : "strong",
+                                                                    "html" : "Successfully deployed your contract!"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "modal-body",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "strong",
+                                                            "html" : [
+                                                                {
+                                                                    "type": "h4",
+                                                                    "html": "Contract has been deployed at this address:"
+                                                                },
+                                                                {
+                                                                    "type": "p",
+                                                                    "id": "result"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type" : "div",
+                                                    "class" : "modal-footer",
+                                                    "html" : [
+                                                        {
+                                                            "type" : "button",
+                                                            "class" : "btn btn-default btn-embossed",
+                                                            "data-dismiss" : "modal",
+                                                            "html" : "Ok"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        });
+
+</script>
+
+<!-- END PAGE SCRIPT -->
+<script data-rocketsrc="./assets/global/plugins/step-form-wizard/plugins/parsley/parsley.min.js" type="text/rocketscript"></script>
+<script data-rocketsrc="./assets/global/plugins/step-form-wizard/js/step-form-wizard.js" type="text/rocketscript"></script>
+<script data-rocketsrc="./assets/global/js/pages/form_wizard.js" type="text/rocketscript"></script>
+<script src="./assets/admin/layout1/js/layout.js"></script>
+<script src="./js/coincreator_form.js"></script>
+</body>
+</html>

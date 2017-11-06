@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="CoinLaunch Dashboard">
+<meta name="author" content="coinlaunch.co">
+<link rel="shortcut icon" href="https://coinlaunch.co/wp-content/uploads/2017/06/Bit-logo2.png" type="image/png">
+<link rel="apple-touch-icon" href="https://coinlaunch.co/wp-content/uploads/2017/06/Bit-logo2.png" type="image/png"/>
+<title>CoinLaunch Dashboard</title>
+<link href="./assets/global/css/style.css" rel="stylesheet">
+<link href="./assets/global/css/theme.css" rel="stylesheet">
+<link href="./assets/global/css/ui.css" rel="stylesheet">
+<link href="./assets/admin/layout1/css/layout.css" rel="stylesheet">
+<link href="./assets/global/plugins/step-form-wizard/css/step-form-wizard.min.css" rel="stylesheet">
+<link href="./assets/global/plugins/select2/dist/css/select2.min.css" rel="stylesheet"/>
+<link href="./assets/global/plugins/input-text/style.min.css" rel="stylesheet">
+
+<!-- BEGIN PAGE STYLE -->
+<link href="./assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+<link href="./assets/global/plugins/select2/dist/css/select2.min.css" rel="stylesheet"/>
+<link href="./assets/global/plugins/metrojs/metrojs.min.css" rel="stylesheet">
+<link href="./assets/global/plugins/maps-amcharts/ammap/ammap.css" rel="stylesheet">
+
+<!-- END PAGE STYLE -->
+
+<script src="./assets/global/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+<!-- LAYOUT: Apply "submenu-hover" class to body element to have sidebar submenu show on mouse hover -->
+<!-- LAYOUT: Apply "sidebar-collapsed" class to body element to have collapsed sidebar -->
+<!-- LAYOUT: Apply "sidebar-top" class to body element to have sidebar on top of the page -->
+<!-- LAYOUT: Apply "sidebar-hover" class to body element to show sidebar only when your mouse is on left / right corner -->
+<!-- LAYOUT: Apply "submenu-hover" class to body element to show sidebar submenu on mouse hover -->
+<!-- LAYOUT: Apply "fixed-sidebar" class to body to have fixed sidebar -->
+<!-- LAYOUT: Apply "fixed-topbar" class to body to have fixed topbar -->
+<!-- LAYOUT: Apply "rtl" class to body to put the sidebar on the right side -->
+<!-- LAYOUT: Apply "boxed" class to body to have your page with 1200px max width -->
+<!-- THEME STYLE: Apply "theme-sdtl" for Sidebar Dark / Topbar Light -->
+<!-- THEME STYLE: Apply  "theme sdtd" for Sidebar Dark / Topbar Dark -->
+<!-- THEME STYLE: Apply "theme sltd" for Sidebar Light / Topbar Dark -->
+<!-- THEME STYLE: Apply "theme sltl" for Sidebar Light / Topbar Light -->
+<!-- THEME COLOR: Apply "color-default" for dark color: #2B2E33 -->
+<!-- THEME COLOR: Apply "color-primary" for primary color: #319DB5 -->
+<!-- THEME COLOR: Apply "color-red" for red color: #C9625F -->
+<!-- THEME COLOR: Apply "color-default" for green color: #18A689 -->
+<!-- THEME COLOR: Apply "color-default" for orange color: #B66D39 -->
+<!-- THEME COLOR: Apply "color-default" for purple color: #6E62B5 -->
+<!-- THEME COLOR: Apply "color-default" for blue color: #4A89DC -->
+<!-- BEGIN BODY -->
+<body class="" style="padding:25px;">
+<div class="page-content">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel">
+        <div class="panel-header" style="margin-left: 15px; margin-top: 16px; text-align: center">
+          <img src="https://app.coinlaunch.co/admin/assets/global/images/logo/Bit-logo-green-500.png" width="48" style="margin-top: -13px;"> <span class="header-title"><strong>Coin</strong>Creator</span>
+        </div>
+        <div class="panel-content">
+          <div class="icheck-inline" style="margin: 5px 0px 0px 15px; text-align: center">
+            <label class="">
+            <div class="iradio_square-blue" style="position: relative;">
+              <input type="radio" name="radio2" data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+              <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+            Crowd Funding
+            </label>
+            <label class="">
+            <div class="iradio_square-blue" style="position: relative;">
+              <input type="radio" name="radio2"   data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+              <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+            Bond / Debt
+            </label>
+            <label class="">
+            <div class="iradio_square-blue" style="position: relative;">
+              <input type="radio" name="radio2" data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+              <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+            Lending
+            </label>
+          </div>
+          <div class="nav-tabs3">
+            <ul id="myTab6" class="nav nav-tabs">
+              <li class="active"><a href="#tab6_1" data-toggle="tab" aria-expanded="true"><i class="icon-home"></i>Setup</a></li>
+              <li class=""><a href="#tab6_2" data-toggle="tab" aria-expanded="false"><i class="fa fa-gears"></i>Permissions</a></li>
+              <li class=""><a href="#tab6_3" data-toggle="tab" aria-expanded="false"><i class="fa fa-users"></i>Crowd Funding</a></li>
+              <li class=""><a href="#tab6_4" data-toggle="tab" aria-expanded="false"><i class="fa fa-bank"></i>Bond / Debt</a></li>
+              <li><a href="#tab6_5" data-toggle="tab" aria-expanded="false"><i class="fa fa-line-chart"></i>Lending</a></li>
+              <li class=""><a href="#tab6_6" data-toggle="tab" aria-expanded="false"><i class="fa fa-code"></i>Contract</a></li>
+               <li class=""><a href="#tab6_7" data-toggle="tab" aria-expanded="false"><i class="icon icons-documents-bookmarks-01"></i>Summary</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade active in" id="tab6_1">
+                <div class="col-sm-12 inside-tooltip">
+                  <input type="text" name="name" class="form-control input-lg form-white" placeholder="Beneficiary Account ">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Put your Etherium address here." data-original-title="Beneficiary Account"></i> </div>
+                <div class="col-sm-12 inside-tooltip">
+                  <input class="form-control input-lg" type="text" placeholder="Coin or Token Name">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="This the full name of your token." data-original-title="Coin or Token Name"></i> </div>
+                <div class="col-sm-12">
+                  <textarea name="comment" rows="10" class="form-control form-white" placeholder="Write your description... (minimum 30 characters)" minlength="30" required aria-required="true"></textarea>
+                </div>
+                <div class="col-sm-12 inside-tooltip">
+                  <input class="form-control input-lg" type="text" placeholder="Choose A Symbol">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="This like your stock ticker symbol, choose something memerable" data-original-title="Your Token or Coin Symbol"></i> </div>
+                <div class="col-sm-12 inside-tooltip">
+                  <input class="form-control input-lg form-white" type="number" placeholder="Number Of Decimal Points">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="How small a fraction would you like to offer?" data-original-title="Number Of Decimal Points"></i> </div>
+              </div>
+              <div class="tab-pane fade" id="tab6_2">
+                <h3>
+                  <label class="switch m-r-20" style="margin-top:-5px">
+                    <input type="checkbox" class="switch-input">
+                    <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                  Enable Market Fee  </h3>
+                  
+                  <div class="col-sm-6 inside-tooltip">
+                  <input type="text" name="name" class="form-control input-sm form-white" placeholder="Percentage fee for each transaction ">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="The percentage of market fees that are applied can be defined and changed by the issuer and any fee generated that way will be accumulated when any tokens are traded. If the Market Fee is set to 1%, the issuer will earn 1% of market volume as profit. These profits are accumulated for each Token and can be withdrawn by the issuer." data-original-title="Market Fee"></i> </div><br><br>
+                  
+                  
+                <h3>
+                  <label class="switch m-r-20" style="margin-top:-5px">
+                    <input type="checkbox" class="switch-input">
+                    <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                  Require holders to be whitelisted </h3>
+                <h3>
+                  <label class="switch m-r-20" style="margin-top:-5px">
+                    <input type="checkbox" class="switch-input">
+                    <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                  Issuer May transfer asset back to itself. </h3>
+                <h3>
+                  <label class="switch m-r-20" style="margin-top:-5px">
+                    <input type="checkbox" class="switch-input">
+                    <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                  Issuer must approve all transfers </h3>
+              
+                </p>
+              </div>
+              <div class="tab-pane fade in" id="tab6_3">
+                <div class="col-sm-12 inside-tooltip">
+                  <input class="form-control input-lg form-white" type="text" placeholder="Funding Goal in Ether">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="How much are you looking to raise?" data-original-title="Funding Goal in Ether"></i>
+                </div>
+                <div class="col-sm-12  inside-tooltip">
+              
+                    <input type="text" name="datetimepicker" class="datetimepicker form-control hasDatepicker input-lg" placeholder="Choose a Start Date. (mm/dd/yy)" id="dp1501598689868">
+                    <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="When should the campaign begin?" data-original-title="Start Date"></i>
+               </div>
+                <div class="col-sm-12  inside-tooltip">
+              
+                  
+                    <input type="text" name="datetimepicker" class="datetimepicker form-control hasDatepicker input-lg form-white" placeholder="Choose a End Date (mm/dd/yy)" id="dp1501598689868">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="When should the campaign End?" data-original-title="End Date"></i>
+                </div>
+                <div class="col-sm-12  inside-tooltip">
+                  <input class="form-control input-lg" type="number" placeholder="Cost of Each Token">
+                   <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="How much should each token cost?" data-original-title="Token Cost"></i>
+                </div>
+                <div class="col-sm-12  inside-tooltip">
+                  <input class="form-control input-lg form-white" type="text" placeholder="Token Reward Address">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Where to send the proceeds? ie. Your Ether Wallet." data-original-title="Token Reward"></i>
+                </div>
+                <div class="col-sm-12">
+                  <h3>
+                    <label class="switch m-r-20" style="margin-top:-5px">
+                      <input type="checkbox" class="switch-input">
+                      <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                    Return Funds if funding not met.</h3>
+                  <h3>
+                    <label class="switch m-r-20" style="margin-top:-5px">
+                      <input type="checkbox" class="switch-input">
+                      <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                    Allow for over subscription</h3>
+                  <h3>
+                    <label class="switch m-r-20" style="margin-top:-5px">
+                      <input type="checkbox" class="switch-input">
+                      <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                    Duplicate Founder Tokens</h3>
+                  <h3>
+                    <label class="switch m-r-20" style="margin-top:-5px">
+                      <input type="checkbox" class="switch-input">
+                      <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                    Veto Power</h3>
+                  <h3>
+                    <label class="switch m-r-20" style="margin-top:-5px">
+                      <input type="checkbox" class="switch-input">
+                      <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                    Enable Token Account Freezing</h3>
+                   
+                  <h3>
+                    <label class="switch m-r-20" style="margin-top:-5px">
+                      <input type="checkbox" class="switch-input">
+                      <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                    Discounts </h3>
+                  <input class="form-control input-sm form-white" type="number" placeholder="Starting Range">
+                  <input class="form-control input-sm form-white" type="number" placeholder="Ending Range">
+                  <input class="form-control input-sm form-white" type="number" placeholder="Discount Percentage">
+                  <input class="form-control input-sm" type="number" placeholder="Starting Range">
+                  <input class="form-control input-sm" type="number" placeholder="Ending Range">
+                  <input class="form-control input-sm" type="number" placeholder="Discount Percentage">
+                  <input class="form-control input-sm form-white" type="number" placeholder="Starting Range">
+                  <input class="form-control input-sm form-white" type="number" placeholder="Ending Range">
+                  <input class="form-control input-sm form-white" type="number" placeholder="Discount Percentage">
+                </div>
+                </p>
+              </div>
+              <div class="tab-pane fade  in" id="tab6_4">
+               
+               <div class="col-sm-12">
+                 
+                                                           <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Coupon dates are the dates on which the bond issuer will make interest payments. Typical intervals are annual or semi-annual coupon paymets." data-original-title="Support Title"></i>  COUPON DATES<BR><BR>
+
+                     <div class="icheck-inline">
+                    <label>
+                    <div class="iradio_square-blue" style="position: relative;">
+                      <input type="radio" name="radio2" data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                    Weekly
+                    </label>
+                     <label>
+                    <div class="iradio_square-blue" style="position: relative;">
+                      <input type="radio" name="radio2" data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                    Bi-Weekly
+                    </label>
+                    
+                    <label>
+                    <div class="iradio_square-blue" style="position: relative;">
+                      <input type="radio" name="radio2" data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                    Monthly
+                    </label>
+                    <label>
+                    <div class="iradio_square-blue" style="position: relative;">
+                      <input type="radio" name="radio2"   data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                    Quarterly
+                    </label>
+                     <label>
+                    <div class="iradio_square-blue" style="position: relative;">
+                      <input type="radio" name="radio2"   data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                    Semi Annually
+                    </label>
+                    <label>
+
+                    <div class="iradio_square-blue" style="position: relative;">
+                      <input type="radio" name="radio2" data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                    Yearly
+                    </label>
+                  </div>
+				  </div>
+               
+                <div class="col-sm-12 inside-tooltip">
+                  <input type="number" name="name" class="form-control input-lg form-white" placeholder="Issue price in ether">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Issue price is the price at which the bond issuer originally sells the bonds." data-original-title="Issue Price"></i> </div>
+                <div class="col-sm-12 inside-tooltip">
+                  <input type="number" name="name" class="form-control input-lg form-white" placeholder="Maturity date">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Maturity date is the date on which the bond will mature and the bond issuer will pay the bond holder the face value of the bond." data-original-title="Maturity Date"></i> </div>
+                 
+                <div class="col-sm-12 inside-tooltip">
+                  <input type="number" name="name" class="form-control input-lg form-white" placeholder="Coupon Rate">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Coupon rate is the rate of interest the bond issuer will pay on the face value of the bond, expressed as a percentage." data-original-title="Coupon Rate"></i> </div>
+                <div class="col-sm-12 inside-tooltip">
+                  <input type="number" name="name" class="form-control input-lg form-white" placeholder="Face value">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Face value is the money amount the bond will be worth at its maturity, and is also the reference amount the bond issuer uses when calculating interest payments." data-original-title="Face Value"></i> </div>
+                
+                  <div class="col-sm-12 inside-tooltip">
+                  <input type="number" name="name" class="form-control input-lg form-white" placeholder="Days Until Default">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="The amount of days of non-payment before collateral is given to debt holders. Only applies to Collaterlalized / secured debt." data-original-title="Deafult"></i> </div>
+                  
+                  <div class="col-sm-12 inside-tooltip">
+                  <input type="number" name="name" class="form-control input-lg form-white" placeholder="Collateral">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Collateral is an asset used to secure a loan; it is something that the lender can take if the borrower defaults. Enter the amount of ether you will use to secure the debt. " data-original-title="Collateral"></i> </div>
+                  
+                     <div class="col-sm-12">
+          
+          <h3>
+                    <label class="switch m-r-20" style="margin-top:-1px">
+                      <input type="checkbox" class="switch-input">
+                      <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                    <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Unsecured debt refers to any type of debt or general obligation that is not protected by a guarantor, or collateralized by a lien on specific assets of the borrower in the case of a bankruptcy or liquidation or failure to meet the terms for repayment." data-original-title="Unsured Debt"></i> Unsecured </h3>
+						  </div>
+                
+                
+                </p>
+              </div>
+              <div class="tab-pane fade in" id="tab6_5">
+               
+                      <div class="col-sm-12">
+                 
+                                                             INTEREST PAYMENT SCHEDULE<BR><BR>
+
+                     <div class="icheck-inline">
+                    <label>
+                    <div class="iradio_square-blue" style="position: relative;">
+                      <input type="radio" name="radio2" data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                    Weekly
+                    </label>
+                     <label>
+                    <div class="iradio_square-blue" style="position: relative;">
+                      <input type="radio" name="radio2" data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                    Bi-Weekly
+                    </label>
+                    
+                    <label>
+                    <div class="iradio_square-blue" style="position: relative;">
+                      <input type="radio" name="radio2" data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                    Monthly
+                    </label>
+                    <label>
+                    <div class="iradio_square-blue" style="position: relative;">
+                      <input type="radio" name="radio2"   data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                    Quarterly
+                    </label>
+                    <label>
+
+                    <div class="iradio_square-blue" style="position: relative;">
+                      <input type="radio" name="radio2" data-radio="iradio_square-blue" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                    Yearly
+                    </label>
+                  </div>
+				  </div>
+               
+               <div class="col-sm-12 inside-tooltip">
+                  <input type="number" name="name" class="form-control input-lg form-white" placeholder="Deposit / Down payment">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="A down payment is a type of payment made in cash during the onset of the purchase of an expensive good or service. ... For example, many homebuyers pay down payments equal to 5 to 25% of the total value of the home." data-original-title="Deposit"></i> </div>
+                  
+                <div class="col-sm-12 inside-tooltip">
+                  <input type="number" name="name" class="form-control input-lg form-white" placeholder="Term in months">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Length of the repayment" data-original-title="Term in months"></i> </div>
+                  
+                <div class="col-sm-12 inside-tooltip">
+                  <input type="number" name="name" class="form-control input-lg form-white" placeholder="Annual percentage rate of charge (APR)">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="The percentage paid based on the value of the issue price" data-original-title="Annual percentage rate"></i> </div>
+                  
+                       <div class="col-sm-12 inside-tooltip">
+                  <input type="number" name="name" class="form-control input-lg form-white" placeholder="Days Until Default">
+                  <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="The amount of days of non-payment before down payment / deposit is given to debt holders. Only applies to Collaterlalized / secured debt." data-original-title="Deafult"></i> </div>
+                  
+   <div class="col-sm-12">
+          
+          <h3>
+                    <label class="switch m-r-20" style="margin-top:-5px">
+                      <input type="checkbox" class="switch-input">
+                      <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                    <em class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="A repayment of the outstanding principal sum made at the end of a loan period, interest only having been paid." data-original-title="Annual percentage rate"></em> Balloon Payment (Interest Only) </h3>
+						  </div>
+                   
+                   
+                    <div class="col-sm-12">
+          
+          <h3>
+                    <label class="switch m-r-20" style="margin-top:-5px">
+                      <input type="checkbox" class="switch-input">
+                      <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                    <i class="fa fa-question-circle c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Principal is the money used to pay down the balance of the loan; interest is the charge paid to the lender for the privilege of borrowing the money" data-original-title=" Principal and Interest"></i> Principal and Interest</h3>
+						  </div>
+                    
+                </p>
+              </div>
+              <div class="tab-pane fade in" id="tab6_6">
+                <div class="col-sm-12">
+                  <textarea name="comment" rows="20" class="form-control form-white" placeholder="Solidity Contract Code" minlength="30" required aria-required="true">	
+pragma solidity ^0.4.0;
+
+contract Token {
+    mapping (address => uint) public balances;
+
+    function Token() {
+        balances[msg.sender] = 1000000;
+    }
+
+    function transfer(address _to, uint _amount) {
+        require (balances[msg.sender] < _amount) {
+                    }
+
+        balances[msg.sender] -= _amount;
+        balances[_to] += _amount;
+    }
+}
+                            	
+                            </textarea>
+                            <BR>   <BR>
+                           TOKEN CONTRACT ADDRESS: <input class="form-control input-sm" type="text" placeholder="0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359">
+                           
+                  <div class="col-sm-12">
+            <h3><i class="fa fa-warning c-blue" rel="popover" data-container="body" data-toggle="popover" data-placement="top" data-content="Deploy your contract. BE CAREFUL, there is no undo." data-original-title="GoLive"></i> <strong>Go</strong>Live
+              <label class="switch m-r-20" style="margin-top:-1px">
+                <input type="checkbox" class="switch-input" >
+                <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"> </span>  </label>
+                
+                
+                
+            </h3>
+          </div>
+                </div>
+                </p>
+              </div>
+              
+              
+              
+              
+         <div class="tab-pane fade in" id="tab6_7">
+               
+                 <h2 STYLE="text-align: center;"><strong>CONTRACT</strong> SUMMARY</h2>
+               
+                 <h3>SETUP</h3>
+                 <h3>PERMISSIONS</h3>
+                 <h3>CROWD FUNDING</h3>
+                 <h3>BOND / DEBT</h3>
+                 <h3>LENDING</h3><br>
+                 <h4>TOKEN CONTRACT ADDRESS: <strong>0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359</strong></h4> 
+
+				   </div>
+              
+              
+              
+            </div>
+          </div>
+        
+        </div>
+				   <div style="text-align: right; margin-top: 10px; margin-right: 25px;">
+				   
+			 
+                 <button type="button" class="btn btn-white" data-toggle="modal" data-target="#colored-embed">Embed</button>      
+                 
+                                   <div class="modal fade" id="colored-embed" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header bg-green">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icons-office-52"></i></button>
+                  <h4 class="modal-title"><strong>Embed </strong> Code</h4>
+                </div>
+                <div class="modal-body">
+                 <textarea name="comment" rows="20" class="form-control form-white" placeholder="Solidity Contract Code" minlength="30" required aria-required="true">	
+<!-- CoinLaunch.co Embed Code -->
+<iframe src="https://app.coinlaunch.co/admin/cl/coincreator-popup.html" name="CoinLaunch" scrolling="auto" frameborder="no" align="center" height = "650px" width = "950px">
+</iframe>
+                            	
+                            </textarea>
+                            
+					
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary btn-embossed" data-dismiss="modal">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+                                      
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-slideright">Reset</button> 
+        
+        <div class="modal fade modal-slideright" id="modal-slideright" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h2 class="c-primary m-b-30">Are you sure?</h2>
+                      <button type="button" class="btn btn-primary btn-embossed btn-block" data-dismiss="modal">Yes</button>
+                      <button type="button" data-dismiss="modal" class="btn btn-white btn-block">Oops!</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+                        
+                          
+     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colored-header">Save</button>
+			    <div class="modal fade" id="colored-header" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header bg-green">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icons-office-52"></i></button>
+                  <h4 class="modal-title"><strong>Terms </strong> of Service</h4>
+                </div>
+                <div class="modal-body">
+                 
+					
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary btn-embossed" data-dismiss="modal">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+				    </div>
+        <!-- insert more content --> 
+        
+      </div>
+    </div>
+    <div class="footer">
+      <div class="copyright">
+        <p class="pull-left sm-pull-reset"> <span>Copyright <span class="copyright">©</span> 2017 </span> <span>CoinLaunch Co</span>. <span>All rights reserved. </span> </p>
+        <p class="pull-right sm-pull-reset"> <span><a href="support.html" class="m-r-10">Support</a> | <a href="terms.html" class="m-l-10 m-r-10">Terms of use</a> | <a href="policy.html" class="m-l-10">Privacy Policy</a></span> </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- END PAGE CONTENT --> 
+  
+  <!-- BEGIN BUILDER --> 
+  
+  <!-- END BUILDER --> 
+  
+  <!-- END PAGE CONTENT --> 
+</div>
+
+<!-- Preloader -->
+<div class="loader-overlay">
+  <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+</div>
+<!-- END PRELOADER --> 
+
+<a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a> 
+<script src="./assets/global/plugins/jquery/jquery-3.1.0.min.js"></script> 
+<script src="./assets/global/plugins/jquery/jquery-migrate-3.0.0.min.js"></script> 
+<script src="./assets/global/plugins/jquery-ui/jquery-ui.min.js"></script> 
+<script src="./assets/global/plugins/gsap/main-gsap.min.js"></script> 
+<script src="./assets/global/plugins/tether/js/tether.min.js"></script> 
+<script src="./assets/global/plugins/bootstrap/js/bootstrap.min.js"></script> 
+<script src="./assets/global/plugins/appear/jquery.appear.js"></script> 
+<script src="./assets/global/plugins/jquery-cookies/jquery.cookies.min.js"></script> <!-- Jquery Cookies, for theme --> 
+
+<script src="./assets/global/plugins/jquery-block-ui/jquery.blockUI.min.js"></script> <!-- simulate synchronous behavior when using AJAX --> 
+
+<script src="./assets/global/plugins/bootbox/bootbox.min.js"></script> <!-- Modal with Validation --> 
+
+<script src="./assets/global/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script> <!-- Custom Scrollbar sidebar --> 
+
+<script src="./assets/global/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script> <!-- Show Dropdown on Mouseover --> 
+
+<script src="./assets/global/plugins/charts-sparkline/sparkline.min.js"></script> <!-- Charts Sparkline --> 
+
+<script src="./assets/global/plugins/retina/retina.min.js"></script> <!-- Retina Display --> 
+
+<script src="./assets/global/plugins/select2/dist/js/select2.full.min.js"></script> <!-- Select Inputs --> 
+
+<script src="./assets/global/plugins/icheck/icheck.min.js"></script> <!-- Checkbox & Radio Inputs --> 
+
+<script src="./assets/global/plugins/backstretch/backstretch.min.js"></script> <!-- Background Image --> 
+
+<script src="./assets/global/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script> <!-- Animated Progress Bar --> 
+
+<script src="./assets/global/js/application.js"></script> <!-- Main Application Script --> 
+
+<script src="./assets/global/js/plugins.js"></script> <!-- Main Plugin Initialization Script --> 
+
+<script src="./assets/global/js/widgets/notes.js"></script> <!-- Notes Widget --> 
+
+<script src="./assets/global/js/pages/search.js"></script> <!-- Search Script --> 
+
+<!-- BEGIN PAGE SCRIPT --> 
+
+<script src="./assets/global/plugins/metrojs/metrojs.min.js"></script> <!-- Flipping Panel --> 
+
+ 
+<script src="./assets/global/plugins/bootstrap-editable/js/bootstrap-editable.min.js"></script> <!-- Inline Edition X-editable --> 
+
+<script src="./assets/global/plugins/bootstrap-context-menu/bootstrap-contextmenu.min.js"></script> <!-- Context Menu --> 
+
+<script src="./assets/global/plugins/multidatepicker/multidatespicker.min.js"></script> <!-- Multi dates Picker --> 
+
+<script src="./assets/global/plugins/charts-chartjs/Chart.min.js"></script> <!-- ChartJS Chart --> 
+
+<script src="./assets/global/plugins/charts-highstock/js/highstock.js"></script> <!-- financial Charts --> 
+
+<script src="./assets/global/plugins/charts-highstock/js/modules/exporting.js"></script> <!-- Financial Charts Export Tool --> 
+
+<script src="./assets/global/plugins/maps-amcharts/ammap/ammap.js"></script> <!-- Vector Map --> 
+
+<script src="./assets/global/plugins/maps-amcharts/ammap/maps/js/worldLow.js"></script> <!-- Vector World Map  --> 
+
+<script src="./assets/global/plugins/maps-amcharts/ammap/themes/black.js"></script> <!-- Vector Map Black Theme --> 
+
+<script src="./assets/global/plugins/skycons/skycons.min.js"></script> <!-- Animated Weather Icons --> 
+
+<script src="./assets/global/plugins/simple-weather/jquery.simpleWeather.js"></script> <!-- Weather Plugin --> 
+
+<script src="./assets/global/js/widgets/todo_list.js"></script> 
+<script src="./assets/global/js/widgets/widget_weather.js"></script> 
+
+<script data-rocketsrc="./assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/rocketscript"></script> <!-- >Bootstrap Date Picker --> 
+<script data-rocketsrc="./assets/global/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js" type="text/rocketscript"></script> <!-- >Bootstrap Date Picker in 
+
+    <!-- END PAGE SCRIPT --> 
+<script data-rocketsrc="./assets/global/plugins/step-form-wizard/plugins/parsley/parsley.min.js" type="text/rocketscript"></script> 
+<script data-rocketsrc="./assets/global/plugins/step-form-wizard/js/step-form-wizard.js" type="text/rocketscript"></script> 
+<script data-rocketsrc="./assets/global/js/pages/form_wizard.js" type="text/rocketscript"></script> 
+<script src="./assets/admin/layout1/js/layout.js"></script>
+</body>
+</html>
